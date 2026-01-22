@@ -1,0 +1,162 @@
+:root {
+  --bg-mobile: hsl(0, 0%, 100%);
+  --bg-desktop: hsl(30, 54%, 90%);
+  --text: hsl(30, 3%, 42%);
+  --borders: hsl(30, 18%, 87%);
+  --second-title: hsl(14, 45%, 36%);
+  --pink: hsl(332, 51%, 32%);
+}
+
+@font-face {
+  font-family: "ygSerif";
+  src: url(./assets/fonts/YoungSerif-Regular.ttf);
+}
+@font-face {
+  font-family: "regular";
+  src: url(./assets/fonts/Outfit-Regular.ttf);
+}
+@font-face {
+  font-family: "bold";
+  src: url(./assets/fonts/Outfit-Bold.ttf);
+}
+@font-face {
+  font-family: "semibold";
+  src: url(./assets/fonts/Outfit-SemiBold.ttf);
+}
+
+body {
+  background: var(--bg-desktop);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  font-family: "regular";
+  font-size: 16px;
+  color: var(--text);
+}
+
+article {
+  max-width: 700px;
+  background: var(--bg-mobile);
+}
+
+section {
+  padding: 32px;
+}
+section:last-of-type {
+  padding-top: 0;
+}
+
+h1,
+h2 {
+  font-family: "ygSerif";
+  font-weight: lighter;
+}
+h1 {
+  color: hsl(24, 5%, 18%);
+}
+h2 {
+  margin: 0;
+  color: var(--second-title);
+}
+
+span,
+.values,
+.time p {
+  font-family: "bold";
+}
+ul li::marker,
+ol li::marker {
+  color: var(--second-title);
+  font-size: 15px;
+}
+
+ul {
+  list-style-type: square;
+}
+ul li {
+  padding-left: 27px;
+}
+
+li {
+  margin: 10px 0;
+}
+/* ILLUSTRATION */
+img {
+  width: 100%;
+}
+
+/* PRESENTATION */
+/* description */
+h1 {
+  line-height: 32px;
+}
+
+/* time */
+.time {
+  border-radius: 10px;
+  background: hsl(330, 100%, 98%);
+  padding: 20px;
+  margin-top: 25px;
+}
+.time p {
+  color: var(--pink);
+  margin-top: 0;
+  font-size: 20px;
+  font-family: "semibold";
+}
+.time ul {
+  padding-left: 20px;
+}
+.time ul li::marker {
+  color: var(--pink);
+}
+
+.time ul li:nth-child(2) {
+  margin: 10px 0;
+}
+
+/* RECIPE */
+
+.instructions {
+  border-top: solid 1px var(--borders);
+  border-bottom: solid 1px var(--borders);
+  padding: 20px 0;
+  margin: 30px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: solid 1px var(--borders);
+}
+tr:last-of-type {
+  border-bottom: none;
+}
+td {
+  padding: 10px 0;
+}
+td:not([class="values"]) {
+  padding-left: 30px;
+}
+.values {
+  color: var(--second-title);
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 710px) {
+  body {
+    padding: 150px 0;
+  }
+  article {
+    border-radius: 20px;
+  }
+  .illustration {
+    padding: 32px 32px 0;
+  }
+}
